@@ -1,10 +1,9 @@
-#Importation de pygame
+#Importation de random
 import random
-
+#Importation de pygame
 import pygame
 #Initialisation de pygame(PG)
 from pygame import mixer
-
 pygame.init()
 
 #Créer une fenêtre pour afficher le jeu
@@ -91,8 +90,8 @@ running = True
 while running:
     # Couleur de l'écran
     window.fill((0,0,0))
-    #BG
-    window.blit(bg, (0, 0))
+    #Background
+    window.blit(bg,(0, 0))
     # Je check tous les événements (clavier/souris)
     for event in pygame.event.get():
         # Est-ce que l'utilisateur clique sur la crois de la fenetre
@@ -109,7 +108,7 @@ while running:
                 laserSfx.play()
                 canShoot = False
                 posLaserX = posX + 45
-                posLaserY = posX - 50
+                posLaserY = posY - 50
 
     # Gestion du déplacement du joueur à l'écran
     if pressed[pygame.K_LEFT] and posX > 0:
